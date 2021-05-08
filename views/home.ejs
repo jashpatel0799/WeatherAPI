@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Weather App</title>
+</head>
+<body onload="myFunction()">
+    <div class="app">
+        <div id="note" value="<%=data.Message%>"></div>
+        <div class="app-card">
+            <div class="container" style="padding: 0%;">
+                <form class="row g-3" action="/" method="GET">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="city1" name="city" placeholder="Enter City Name">
+                    </div>
+                    <div class="col-auto ml-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="box">
+                <div class="wave wave-one"></div>
+                <div class="wave wave-two"></div>
+                <div class="wave wave-three"></div>
+                
+                <div id="weathericon"><%=data.Status%></i></div>
+
+                <div class="info">
+                    <h2 class="location"><i class="fa fa-street-view"></i> <%=data.City%>, <%=data.Country%> </h2>
+                    <p id="date"> TUS | MAY 6 | 10:30AM </p>
+                    <h1 class="temp" id="Temp"><%=data.Temp%> °C</h1>
+                    <h3 class="tempmaxmin">Min <%=data.Tempmin%>°C | Max <%=data.Tempmax%>°C</h3>
+                </div>
+            </div> 
+        </div>
+    </div>   
+</body>
+<script type="text/javascript" src="/js/home.js"></script>
+</html>
